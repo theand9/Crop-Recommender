@@ -80,11 +80,6 @@ Refer to the *System Architecture diagram* in the documentation for detailed wor
 
 ---
 
-### **Screenshots**
-- [Add project screenshots or GIFs here to show the interface and results.]
-
----
-
 ### **Limitations**
 - Currently supports only Maharashtra, India.
 - Requires stable internet connectivity.
