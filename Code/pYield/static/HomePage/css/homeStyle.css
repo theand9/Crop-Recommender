@@ -1,0 +1,475 @@
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.4);
+  background-color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #45ef24;
+  border-radius: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: "Signika Negative", sans-serif;
+}
+
+body p, body a, body button, body li {
+  font-family: "Raleway", sans-serif;
+}
+
+header .navbar {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+}
+
+header .navbar .navbar-brand {
+  color: #fff;
+}
+
+header .navbar .navbar-brand span {
+  font-family: "Merienda", cursive;
+}
+
+header .navbar .navbar-nav {
+  padding: 10px 0;
+}
+
+header .navbar .navbar-nav .btn-danger {
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 0.8em;
+}
+
+header .navbar .navbar-nav .btn-danger .fas {
+  color: red;
+}
+
+header .navbar .navbar-nav .btn-danger:hover {
+  outline: none;
+  background-color: red;
+  border-radius: 0.8em;
+}
+
+header .navbar .navbar-nav .btn-danger:hover span .fas {
+  color: #fff;
+}
+
+header .navbar .navbar-nav .nav-link {
+  padding: 6px 12px;
+  color: #fff;
+  margin: 5px 8px;
+  font-size: 1.2em;
+  font-family: "Signika Negative", sans-serif;
+}
+
+header .navbar .navbar-nav .nav-link span {
+  color: #45CE30;
+}
+
+header .navbar .navbar-nav .nav-link:hover {
+  background-color: #45CE30;
+  color: #fff;
+  -webkit-transition: .3s;
+  transition: .3s;
+  border-radius: 10px;
+}
+
+header .navbar .navbar-nav .nav-link:hover span {
+  color: #fff;
+}
+
+/* css related to carousel */
+.carousel-inner {
+  height: 100vh;
+}
+
+.carousel-inner .carousel-item img {
+  height: 100vh;
+}
+
+.carousel-inner .layer {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.carousel-caption {
+  color: #fff;
+  top: 40%;
+  text-align: left;
+}
+
+.carousel-caption > h1 {
+  font-size: 3em;
+  margin-left: -30px;
+}
+
+.carousel-caption > p {
+  margin-left: -30px;
+}
+
+.carousel-caption > button {
+  margin-left: -30px;
+}
+
+.btn > i {
+  font-size: 2em;
+  outline: none;
+}
+
+.hero-text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.media i {
+  color: #000;
+}
+
+.services {
+  background: #00F260;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#0575E6), to(#00F260));
+  background: linear-gradient(to left, #0575E6, #00F260);
+}
+
+.services .serviceHead {
+  font-weight: 800;
+}
+
+.panel {
+  background-color: white;
+}
+
+.panel-heading {
+  padding: 10px;
+}
+
+.panel-body {
+  padding: 10px;
+}
+
+.panel-title > a:before {
+  float: right !important;
+  content: "\f068";
+  font-family: FontAwesome;
+  padding-right: 5px;
+}
+
+.panel-title > a.collapsed:before {
+  float: right !important;
+  content: "\f067";
+}
+
+.panel-title > a:hover,
+.panel-title > a:active,
+.panel-title > a:focus {
+  text-decoration: none;
+}
+
+.working-section {
+  min-height: 1400px;
+  background: transparent;
+}
+
+.solving-problems {
+  background: #00F260;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#0575E6), to(#00F260));
+  background: linear-gradient(to left, #0575E6, #00F260);
+  padding-bottom: 2%;
+}
+
+.solving-problems .container-fluid {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+}
+
+.solving-problems .container-fluid #one {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: #0f6;
+  position: relative;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #one .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.solving-problems .container-fluid #two {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #0e8;
+  position: relative;
+  margin-left: 60%;
+  margin-top: -10%;
+  margin-bottom: 10%;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #two .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.solving-problems .container-fluid #three {
+  height: 380px;
+  width: 380px;
+  border-radius: 50%;
+  background-color: #0ba;
+  margin-left: 5%;
+  margin-top: -20%;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #three .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.solving-problems .container-fluid #four {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #0ab;
+  margin-left: -46%;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #four .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.solving-problems .container-fluid #five {
+  height: 270px;
+  width: 270px;
+  border-radius: 50%;
+  background-color: #08e;
+  position: relative;
+  margin-left: -37%;
+  margin-top: 18%;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #five .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.solving-problems .container-fluid #six {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  background-color: #0f6;
+  position: relative;
+  margin-top: -40%;
+  margin-left: 2%;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #six .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.solving-problems .container-fluid #seven {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: #08e;
+  position: relative;
+  margin-top: -145%;
+  margin-left: 15%;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #seven .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.solving-problems .container-fluid #eight {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  background-color: #07e;
+  position: relative;
+  margin-top: -2%;
+  margin-left: 54%;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #eight .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.solving-problems .container-fluid #nine {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  background-color: #0c9;
+  position: relative;
+  margin-top: 20px;
+  margin-left: -16%;
+  color: #fff;
+  -webkit-box-shadow: 1px 1px 20px 6px #000;
+          box-shadow: 1px 1px 20px 6px #000;
+}
+
+.solving-problems .container-fluid #nine .content {
+  position: absolute;
+  width: inherit;
+  height: auto;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center;
+}
+
+.chead {
+  background: #00F260;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#0575E6), to(#00F260));
+  background: linear-gradient(to left, #0575E6, #00F260);
+}
+
+footer .section-upper {
+  height: auto;
+  width: 100%;
+  background-color: #000;
+}
+
+footer .section-upper .align {
+  padding-top: 40px;
+  padding-left: 25px;
+  padding-right: 10px;
+  color: #fff;
+}
+
+footer .section-upper .align h4 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+footer .section-upper .align h6 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+footer .section-upper .align span {
+  color: #45CE30;
+}
+
+footer .section-upper .img-align img {
+  padding-top: 40px;
+  padding-left: 3px;
+  width: 365px;
+  height: 230px;
+}
+
+footer .section-upper .inside-align {
+  margin-top: 8px;
+  padding-top: 14px;
+}
+
+footer .section-upper .inside-align .email {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .section-upper .inside-align .email:hover {
+  color: #45CE30;
+}
+
+footer .section-lower {
+  background-color: #011;
+  height: 100px;
+  width: 100%;
+}
+
+footer .section-lower .inside-align {
+  color: #fff;
+  font-size: 10px;
+}
+/*# sourceMappingURL=homeStyle.css.map */

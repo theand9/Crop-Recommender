@@ -1,0 +1,50 @@
+
+
+.about-section .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+
+  .about-section .container-fluid .topImage img {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .about-section .container-fluid .topImage .layer {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+  }
+
+  .about-section .container-fluid .section-title .section_main_title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 35px;
+    line-height: 1.27;
+    font-weight: 300;
+  }
+
+  .about-section .container-fluid .section-title .section_main_title strong {
+    font-weight: 600;
+  }
+
+
+  .form-section{
+      margin-top: -4%;
+      background-color: #fff;
+      padding: 50px 20px;
+  }
+
+
+  .form-section .btn-success{
+    background-color: #000;
+    outline: none;
+    border: none;
+  }
+
+  .form-section .btn-success:hover{
+    background-color: #45ce30;
+
+  }

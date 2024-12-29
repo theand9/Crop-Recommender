@@ -1,0 +1,479 @@
+
+$navbar_font: 'Roboto', sans-serif;
+$navlink_color: #fff;
+$spanColor: #45CE30;
+$linkHoverColor: #45CE30;
+$navlink-hoverColor: #fff;
+
+$footerBG-color: #000;
+$footerText-color: #fff;
+$lowerFooterColor: #011;
+
+
+$zero : 0px;
+$wid  : 800px;
+$hei  : 234px;
+$precent   : 100%;
+$btn-hover : .5 .8;
+$display   : block none ;
+
+$MainLogoFont:'Merienda', cursive;
+$HeadingFont:'Signika Negative', sans-serif;
+$ParagraphFont:'Raleway', sans-serif;
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .4);
+    background-color: #000;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #45ef24;
+    border-radius: 20px;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    h1,h2,h3,h4,h5,h6{
+        font-family: $HeadingFont;
+    }
+
+    p,a,button,li{
+        font-family: $ParagraphFont;
+    }
+    
+    
+}
+
+
+
+// header editing starts here
+header{
+    .navbar{
+        font-family: $navbar_font;
+        font-size: 1.2em;
+    .navbar-brand{
+        color: #fff;
+
+        span{
+            font-family: $MainLogoFont;
+        }
+    }
+
+        .navbar-nav{
+            padding: 10px 0;
+
+            .btn-danger{
+                background-color: transparent;
+                color: #fff;
+                outline: none;
+                border: none;
+                border-radius: 0.8em;
+
+                .fas{
+                    color: red;
+                }
+
+
+            }
+            .btn-danger:hover{
+                outline: none;
+                background-color: red;
+                border-radius: 0.8em;
+                span .fas{
+                    color: #fff;
+                }
+            }
+
+            .nav-link{
+                padding: 6px 12px;
+                color: $navlink_color;
+                margin: 5px 8px;
+                font-size: 1.2em;
+                font-family: $HeadingFont;
+
+
+                span{
+                    color: $spanColor ;
+
+                }
+            }
+            .nav-link:hover{
+                background-color: $linkHoverColor;
+                color: $navlink-hoverColor;
+                transition: .3s;
+                border-radius: 10px;
+                span{
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
+}
+
+
+
+
+    /* css related to carousel */
+    .carousel-inner{
+        .carousel-item img{
+            height: 100vh;
+        }
+        height: 100vh;
+
+.layer {
+    background-color: rgba(0,0,0, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+    }
+    .carousel-caption{
+        color: #fff;
+        top: 40%;
+        text-align: left;
+
+    }
+    .carousel-caption > h1{
+        font-size: 3em;
+        margin-left: -30px;
+    }
+
+    .carousel-caption > p{
+        margin-left: -30px;
+    }
+
+    .carousel-caption > button{
+        margin-left: -30px;
+    }
+
+    .btn > i{
+        font-size: 2em;
+        outline: none;
+    }
+
+
+    .hero-text{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+
+    .media i{
+        color: #000;
+    }
+
+    .services{
+        background: #00F260;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #0575E6, #00F260);
+
+        .serviceHead{
+            font-weight: 800;
+        }
+    }
+
+    .panel{
+        background-color: white;
+    }
+    .panel-heading{
+        padding: 10px;
+    }
+    .panel-body{
+    padding: 10px;
+    }
+    .panel-title > a:before{
+        float: right !important;
+        content: "\f068";
+        font-family: FontAwesome;
+        padding-right: 5px;
+    }
+
+    .panel-title > a.collapsed:before{
+        float: right !important;
+        content: "\f067";
+    }
+
+    .panel-title > a:hover,
+    .panel-title > a:active,
+    .panel-title > a:focus{
+        text-decoration: none;
+    }
+
+
+    .working-section{
+
+        min-height: 1400px;
+        background: transparent;
+    }
+
+
+
+//    solving-problems section starts here
+    .solving-problems{
+        background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0575E6, #00F260);
+    // padding-top: 80px;
+    padding-bottom: 2%;
+        .container-fluid{
+            background-color: #fff;
+            width: 100%;
+            height: auto;
+            #one{
+                height: 300px;
+                width: 300px;
+                border-radius: 50%;
+                background-color: #0f6;
+                position: relative;
+                color: #fff;
+                box-shadow: 1px 1px 20px 6px #000;
+
+                .content{
+                    position: absolute;
+                    width: inherit;
+                    height: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                }
+            }
+            #two{
+                    height: 200px;
+                    width: 200px;
+                    border-radius: 50%;
+                    background-color: #0e8;
+                    position: relative;
+                    margin-left: 60%;
+                    margin-top: -10%;
+                    margin-bottom: 10%;
+                    color: #fff;
+                    box-shadow: 1px 1px 20px 6px #000;
+
+
+                    .content{
+                        position: absolute;
+                        width: inherit;
+                        height: auto;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        text-align: center;
+                    }
+            }
+            #three{
+            height: 380px;
+            width: 380px;
+            border-radius: 50%;
+            background-color: #0ba;
+            margin-left: 5%;
+            margin-top: -20%;
+            color: #fff;
+            box-shadow: 1px 1px 20px 6px #000;
+
+            .content{
+                position: absolute;
+                width: inherit;
+                height: auto;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+            }
+            }
+            #four{
+                height: 150px;
+                width: 150px;
+                border-radius: 50%;
+               background-color: #0ab;
+                margin-left: -46%;
+                color: #fff;
+                box-shadow: 1px 1px 20px 6px #000;
+
+                .content{
+                    position: absolute;
+                    width: inherit;
+                    height: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                }
+            }
+            #five{
+            height: 270px;
+            width: 270px;
+            border-radius: 50%;
+            background-color: #08e;
+            position: relative;
+            margin-left: -37%;
+            margin-top: 18%;
+
+            color: #fff;
+            box-shadow: 1px 1px 20px 6px #000;
+
+            .content{
+                position: absolute;
+                width: inherit;
+                height: auto;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+            }
+            }
+
+            #six{
+                height: 140px;
+                width: 140px;
+                border-radius: 50%;
+                background-color: #0f6;
+                position: relative;
+                margin-top: -40%;
+                margin-left: 2%;
+                color: #fff;
+                box-shadow: 1px 1px 20px 6px #000;
+
+                .content{
+                    position: absolute;
+                    width: inherit;
+                    height: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                }
+            }
+            #seven{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            background-color: #08e;
+            position: relative;
+            margin-top: -145%;
+            margin-left: 15%;
+            color: #fff;
+            box-shadow: 1px 1px 20px 6px #000;
+
+            .content{
+                position: absolute;
+                width: inherit;
+                height: auto;
+                top: 50%;
+                transform: translateY(-50%);
+                text-align: center;
+            }
+            }
+            #eight{
+        height: 180px;
+        width: 180px;
+        border-radius: 50%;
+        background-color: #07e;
+        position: relative;
+        margin-top: -2%;
+        margin-left: 54%;
+        color: #fff;
+        box-shadow: 1px 1px 20px 6px #000;
+
+        .content{
+            position: absolute;
+            width: inherit;
+            height: auto;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+            }
+            #nine{
+                height: 120px;
+                width: 120px;
+                border-radius: 50%;
+                background-color: #0c9;
+                position: relative;
+                margin-top: 20px;
+                margin-left: -16%;
+                color: #fff;
+                box-shadow: 1px 1px 20px 6px #000;
+
+                .content{
+                    position: absolute;
+                    width: inherit;
+                    height: auto;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    text-align: center;
+                }
+                    }
+
+        }
+    }
+//    solving-problems section ends here
+
+.chead{
+    background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0575E6, #00F260);
+}
+
+
+
+
+
+//footer editing starts here
+footer{
+    .section-upper{
+        height: auto;
+        width: 100%;
+        background-color: $footerBG-color;
+        .align{
+            padding-top: 40px;
+            padding-left: 25px;
+            padding-right: 10px;
+            color: $footerText-color;
+            h4{
+                font-size: 1.8em;
+                margin-bottom: 20px;
+            }
+            h6{
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            span{
+                color: $spanColor;
+            }
+        }
+        .img-align img{
+            padding-top: 40px;
+            padding-left: 3px;
+            width: 365px;
+            height: 230px;
+
+        }
+        .inside-align{
+            margin-top: 8px;
+            padding-top: 14px;
+            .email{
+                text-decoration: none;
+                color: $footerText-color;
+            }
+            .email:hover{
+                color: $linkHoverColor;
+            }
+        }
+    }
+
+    .section-lower{
+        background-color: $lowerFooterColor;
+        height: 100px;
+        width: 100%;
+
+        .inside-align{
+           color: $footerText-color;
+           font-size: 10px;
+        }
+    }
+
+}

@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<html  lang="en">
+<head>
+<link  rel="stylesheet"  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<title>District Officer Login | PredictiveYield</title>
+<style>
+  body{
+    background: #00F260;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #0575E6, #00F260);
+  }
+</style>
+
+<link rel="shortcut icon" href="{% static 'HomePage/images/favicon.ico' type='image/x-icon' %}">
+</head>
+<body>
+  
+  <div  class="container mt-5">
+  
+    <div  class="row justify-content-center">
+      <div  class="col-md-5">
+      <h1  class="text-center display-4">Admin Login Panel</h1>
+      {% block main %}
+
+      
+      {% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

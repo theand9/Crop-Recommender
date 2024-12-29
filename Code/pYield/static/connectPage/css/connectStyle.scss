@@ -1,0 +1,117 @@
+$navbar_font: 'Roboto', sans-serif;
+$spanColor: #000;
+$containerBG: #fff;
+$divBG: #fff;
+// *{
+//     box-sizing: border-box;
+//     font-family: 'Cabin', sans-serif;
+// }
+
+body{
+    background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+
+}
+
+    .image-section{
+        img{
+            height: 100vh;
+            width: 100%;
+            // margin-left: -1%;
+            margin-right: -2%;
+
+
+        }
+        .layer {
+            background-color: rgba(0,0,0, 0.6);
+            position: absolute;
+            height: 100vh;
+            width: 100%;
+
+            }
+    }
+
+
+
+    .contact-details{
+        background-color: #fff;
+        padding: 20px;
+        height: auto;
+        width: 100%;
+        // margin-top: 7%;
+        .content{
+            padding-left: 3em;
+            padding-right: 3em;
+            // padding-top: 1.5em;
+            padding-bottom: 1.5em;
+            line-height: 30px;
+            border-left: 1px solid #000;
+
+            h2{
+                color: #000;
+            }
+            form{
+
+                button{
+                    background-color: #000;
+                    outline: none;
+                    border: none;
+                }
+
+                button:hover{
+                color: #fff;
+                background-color: rgba(5, 245, 21, 0.98);
+                transition: .3s;
+                }
+
+                a{
+                    color:  rgba(5, 245, 21, 0.98);
+                }
+            }
+
+
+        }
+        .content:first-child{
+            border-left: none;
+        }
+
+    }
+
+
+    .panel{
+        background-color: #fff;
+    }
+    .panel-heading{
+        padding: 10px;
+    }
+    .panel-body{
+    padding: 10px;
+    }
+    .panel-title > a:before{
+        float: right !important;
+        content: "\f068";
+        font-family: FontAwesome;
+        padding-right: 5px;
+    }
+
+    .panel-title > a.collapsed:before{
+        float: right !important;
+        content: "\f067";
+    }
+
+    .panel-title > a:hover,
+    .panel-title > a:active,
+    .panel-title > a:focus{
+        text-decoration: none;
+    }
+
+.map-section{
+    iframe{
+        margin-bottom: -10px;
+    }
+}

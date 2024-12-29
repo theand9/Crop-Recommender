@@ -1,0 +1,2257 @@
+{% extends 'base.html'%}
+{% load staticfiles %}
+
+
+{%block content%}
+
+<style>
+    .timeline-panel {
+        /* margin-top: -10%; */
+        width: 90px;
+        height: 130px;
+        /* background-color: #A0DE21; */
+        /* -moz-border-radius: 100px 0px; */
+        /* -webkit-border-radius: 100px 0px; */
+        border-radius: 0px 50px;
+
+    }
+
+    .timeline-panel .timeline-body p {
+        font-family: 'Signika Negative', sans-serif;
+        font-size: 1.2em;
+    }
+
+    .btn-outline-light {
+        font-family: "'Signika Negative', sans-serif";
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+
+    .modal-header {
+        background-color: #45ef24;
+    }
+
+    .modal-body {
+        padding-left: 50px;
+        border: 3px solid #45ef24;
+    }
+</style>
+<title> Home | PredictiveYield</title>
+
+<link rel="stylesheet" href="{% static 'HomePage/css/process.css'%}">
+<link rel="stylesheet" href="{% static 'HomePage/css/swiper.min.css'%}">
+<link rel="stylesheet" href="{% static 'HomePage/css/swiperStyle.css'%}">
+
+<!-- carousel starts here -->
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="{% static 'HomePage/images/p1.jpeg'%}" alt="First slide">
+            <div class=" layer"></div>
+            <div class="carousel-caption">
+                <h1 class="animated fadeIn delay-1s"> Reliable Crop Recommendations
+                </h1>
+                <hr style="background-color: #fff;margin-left: -30px;margin-right: 40%;">
+                <p class="animated fadeIn delay-1s">With MORE than 40 Million+ Soil Samples, Industry Leading Weather
+                    Forecasting and 50 Years of <br>Historical Yield Data.
+                    We have you covered.</p>
+                <a href="{% url 'about'%}"><button type="button" class="btn btn-danger btn-sm"
+                        style="font-size:1.2em;margin-left: -2em;">Know More</button></a> <i
+                    class="fas fa-angle-double-right"></i>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="layer"></div>
+
+            <img class="d-block w-100" src="{% static 'HomePage/images/p2.jpeg'%}" alt="First slide">
+
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="animated fadeIn delay-1s">Solutions for a Healthier, Sustainable Future</h1>
+                <hr style="background-color: #fff;margin-left: -30px;margin-right: 40%;">
+                <p class="animated fadeIn delay-1s">
+                    Empowering more than 10 Million Farmers in Maharashtra with
+                    Cutting Edge Agro-Tech Solutions <br>for Bumper Yields and Maximized Profits</p>
+                <a href="{% url 'about'%}"><button type="button" class="btn btn-danger btn-sm"
+                        style="font-size:1.2em;margin-left: -2em;">Know More</button></a> <i
+                    class="fas fa-angle-double-right"></i>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="{% static 'HomePage/images/p3.jpeg'%}" alt="First slide">
+            <div class="layer"></div>
+
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="animated fadeIn delay-1s ">Technology Driven Smart Solutions </h1>
+                <hr style="background-color: #fff;margin-left: -30px;margin-right: 40%;">
+                <p class="animated fadeIn delay-1s">
+                    Harnessing the Power of Artificial Intelligence to Disrupt and
+                    Revolutionize Agriculture in India
+                </p>
+                <a href="{% url 'about'%}"><button type="button" class="btn btn-danger btn-sm"
+                        style="font-size:1.2em;margin-left: -2em;">Know More</button></a> <i
+                    class="fas fa-angle-double-right"></i>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <i class="fas fa-chevron-circle-left" style="font-size:3.5em;color: black;"></i>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next " href="#carouselExampleIndicators" role="button" data-slide="next">
+        <i class="fas fa-chevron-circle-right" style="font-size:3.5em;color: black;"></i>
+        <!-- <span class="sr-only">Next</span> -->
+    </a>
+</div>
+<!-- carousel ends here -->
+
+<!-- random bubbles (Problems We Solve Section) -->
+<section class="solving-problems ">
+    <div class="container-fluid p-5 mb-5">
+        <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="section_main_title text-center" style="font-weight: 400;"><i class="fas fa-eraser"
+                        style="font-size: 1.5em;"></i>
+                    PROBLEMS WE <strong> SOLVE</strong> :</h2>
+                <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="one">
+                    <div class="content">
+                        <h5><b>Unpredictable Climatic <br> Conditions</b></h5>
+                        <p>
+                            Providing Accurate 7-Day Weather<br> Forecasts ie. Humidity, Precipitation <br> Probability
+                            and Intensity, Wind Speed etc.<br> to all Farmers on their Phones
+                        </p>
+                    </div>
+                </div>
+                <div id="two">
+                    <div class="content">
+                        <h5><b>Bad Farming <br> Practices</b></h5>
+                        <p>
+                            Supplying Guides on the Best Cultivating and Harvesting Techniques for Every Crop </p>
+                    </div>
+                </div>
+                <div id="six">
+                    <div class="content">
+                        <h6><b>Indecisiveness</b></h6>
+                        <p>Yield Forecaster and Profit Estimator</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div id="nine">
+                    <div class="content">
+
+                    </div>
+                </div>
+                <div id="three">
+                    <div class="content">
+                        <h4><b>Lack of Actionable Insights <br>and Metrics</b></h4>
+                        <p>
+                            Having more than 40 Million Soil Samples for more than 40 Thousand Villages, 50 Years of
+                            Yield Data for 20 Crops and with the Power of AI. pYield Provides Deeper Insights and
+                            Granular Proficiency at Recommending Crops.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <div id="four">
+                    <div class="content">
+                        <h5><b></b></h5>
+                        <p>Lorem ipsum dolor sit amet </p>
+                    </div>
+                </div>
+                <div id="five">
+                    <div class="content">
+                        <h5><b>Severe Weather Alerts</b></h5>
+                        <p>
+                            Notifications and In-Advance Alert Messages with Possible Solutions will be provided to aid
+                            Farmers in Coping Up with Disasters and Calamities
+                        </p>
+                    </div>
+                </div>
+                <div id="seven">
+                    <div class="content">
+                        <br>
+                        <h6><strong>Expensive Solutions</strong></b></h6>
+                        <p>pYield is Free to Use and provides Free of Cost Recommendations</p>
+                    </div>
+                </div>
+                <div id="eight">
+                    <div class="content">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- random bubbles (Problems We Solve Section) -->
+
+<div class="row chead">
+    <div class="col-md-12">
+        <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;margin-top: -1%;">
+        <h2 class="section_main_title text-center" style="font-weight: 400;"><i class="fas fa-hand-holding-heart"
+                style="font-size: 1.5em;"></i> HOW WE <strong> RECOMMEND :</strong></h2>
+        <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+        <p class="hero-text text-center mt-4 mb-4">
+            Authentic and Customized Recommendations using the Power of a Constantly Learning Smart Machine fueled by
+            Big Data
+        </p>
+    </div>
+</div>
+
+<div class="working-section" data-parallax="scroll" data-image-src="{% static 'HomePage/images/pallex.jpeg'%}">
+
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <ul class="timeline">
+                    <li>
+                        <div class="timeline-image">
+                            <h1 class="text-center mt-5">1</h1>
+                            <img class="img-circle img-responsive" src="{% static 'img/about/1.jpg'%}" alt="">
+                        </div>
+
+                        <div class="timeline-panel mt-3 p-4" style="background-color: #2ecc71;">
+
+                            <div class="timeline-body">
+                                <p class=" mr-3">
+                                    The Farmer navigates to the Register Page
+                                    where he may either Register himself or search his profile by entering his details
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+
+                        <div class="timeline-image">
+                            <h1 class="text-center mt-5">2</h1>
+                            <img class="img-circle img-responsive" src="{% static 'img/about/2.jpg'%}" alt="">
+                        </div>
+                        <div class="timeline-panel mt-3 p-4" style="background-color: #2ecc71;">
+
+                            <div class="timeline-body">
+                                <p>
+                                    The Farmer will be Navigated to his profile where he may Verify his Details, Enter
+                                    Previous Year Crop Yield or get Recommendations
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="timeline-image">
+                            <h1 class="text-center mt-4 p-4">3</h1>
+                            <img class="img-circle img-responsive" src="{% static 'img/about/3.jpg'%}" alt="">
+                        </div>
+                        <div class="timeline-panel mt-3 p-4" style="background-color: #2ecc71;">
+
+                            <div class="timeline-body">
+                                <p>
+                                    On clicking Get Recommendations the Farmer's Details shall be given to the
+                                    Recommender System.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted">
+                        <div class="timeline-image">
+                            <h1 class="text-center mt-4 p-4">4</h1>
+                            <img class="img-circle img-responsive" src="{% static 'img/about/4.jpg'%}" alt="">
+                        </div>
+                        <div class="timeline-panel mt-5 p-4" style="background-color: #2ecc71;">
+
+                            <div class="timeline-body">
+                                <p>
+                                    The Result shall be presented in a PDF format and can be Downloaded for future
+                                    reference.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="timeline-inverted p-5">
+                        <div class="timeline-image animated infinite tada" style="background: #00F260;
+                            background: -webkit-linear-gradient(to left, #0575E6, #00F260);
+                            background: linear-gradient(to left, #0575E6, #00F260);height:190px;width: 190px;"> <br>
+                            <h6>Join US<br>
+                                <br>for <br>
+                                <br>Best Recommendation!!</h6>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- about section ends here     -->
+
+<!-- Services Section Starts here -->
+<div class="container-fluid  pb-5 services">
+
+    <div class="row chead">
+
+        <div class="col-md-12">
+            <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;margin-top: 60px;">
+            <h2 class="section_main_title text-center" style="font-weight: 400;"> <i class="fas fa-cogs"
+                    style="font-size:1.5em; "></i> OUR<strong> SERVICES</strong></h2>
+
+            <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+        </div>
+    </div>
+    <div class="row mt-2 text-center">
+        <div class="col-md-6 m-auto" style="padding: 0;">
+            <p class="hero-text">pYield provides Complete Crop Management Services for all the Needs of a Modern
+                Farmer!!
+            </p>
+        </div>
+    </div>
+
+
+    <!-- A row with two equal columns -->
+    <div class="row ml-5 mt-4">
+        <div class="col-md-6 mt-3">
+            <div class="media">
+                <h1><i class="fas fa-umbrella mr-4"></i></i></h1>
+                <div class="media-body">
+                    <h5 class="mt-0" style="font-size:1.6em;font-weight:600">Weather Forecasting and Alerts</h5>
+                    <p>
+                        pYield provides Accurate, One-Week Forecasts and Severe Weather Alerts to All Farmers. <br>
+                        Powered by the Dark Sky API.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6 mt-3">
+            <div class="media">
+                <h1><i class="fas fa-pencil-alt mr-4"></i></h1>
+                <div class="media-body">
+                    <h5 class="mt-0" style="font-size:1.6em;font-weight:600">Crop Recommendation PDF</h5>
+                    <p>
+                        We provide a Printed Copy of the Crop Recommendations Report in PDF format. <br>This Report
+                        includes Recommendations of Various Crops, their Expected Yield, <br>Profit as well as the
+                        Pesticides and Fertilizers to use.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- a row with two equal columns -->
+    <div class="row ml-5 mt-4">
+        <div class="col-md-6 mt-3">
+            <div class="media">
+                <h1><i class="fas fa-university mr-4"></i></h1>
+                <div class="media-body">
+                    <h5 class="mt-0" style="font-size:1.6em;font-weight:600">Multilingual and Personalized</h5>
+                    <p>
+                        pYield Caters to you in English as well as Hindi.<br>
+                        Every Farmer is provided with a Unique Login ID which is their Aadhar Card No. <br>
+                        Crops are Recommended on the basis of their Village and Land Holding Size.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-md-6 mt-3">
+            <div class="media">
+                <h1><i class="fas fa-cog mr-4"></i></h1>
+                <div class="media-body">
+                    <h5 class="mt-0" style="font-size:1.6em;font-weight:600">Estimate Cultivation Cost, Yield and
+                        Profits
+                    </h5>
+                    <p>With more than 50 Years of Yield, Cost, Profit data. We Asssure Precise and<br> Maximized Yields
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+<!-- Sercices section sends here -->
+
+<!-- crop section starts here -->
+<div class="crop-secrtion mt-3" style="background-color: #fff;">
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="arhar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> ARHAR</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/SyHVyZU8xKI"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Sow crop in second fortnight of May for obtaining high grain yield. Timely sowing of
+                                    crop is important as delay in sowing leads to yield loss.</p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>For good yield use seed rate of 6 kg per acre.</p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    Apply fertilizers basally before sowing as per following dose:
+                                    Rained : 12.5 kg N + 25 kg P2O5 + 12.5 kg K2O +10 kg S/ha
+                                    Irrigated : 25 kg N + 50 kg P2O5 + 25 kg K2O + 20 kg S/ha
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>
+                                    <ol type="a">
+                                        <li>Red Gram requires 35-40 cm water, during its entire growth period. </li>
+                                        <li> Optimum moisture is necessary during the Budding, Flowering and Pod
+                                            formation stages.</li>
+                                        <li>If there is water stress, protective irrigation may be given in alternate
+                                            rows at these 3 stages.</li>
+                                    </ol>
+                                </p>
+                            </li>
+
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                <p>
+                                    The most common diseases and pests affecting the toor dal crop and their control
+                                    measures are as follows:
+                                    <ul>
+                                        <li>Butterfly- carbaryl application</li>
+                                        <li>Moth- indoxacarb or dimethoate application</li>
+                                        <li>Pod borer- dimethoate or azadirachtin application</li>
+                                        <li>Pod borer- dimethoate or azadirachtin application</li>
+                                        <li>Whitefly- dimethoate or phosphamidon spray</li>
+                                        <li>Aphids- dimethoate application</li>
+                                        <li>Powdery mildew- carbendazim or wettable sulphur spray</li>
+                                        <li>Mosaic disease- fenazaquin spray</li>
+                                        <li>Fusarium wilt- appropriate treatment with farmyard manure and other agents
+                                        </li>
+                                        <li>Leaf spot- Mancozeb spray </li>
+                                    </ul>
+                                </p>
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>For vegetable purpose harvest plant when leaves and pods are of green color. For
+                                    grain purpose, when 75-80% pods turn brown and dry, it is right time of harvesting.
+                                    Delay in harvesting result in damage of seeds. Harvesting can be done manually by
+                                    cutting stem or by Machine. After harvesting keep bundles of plant upright for
+                                    drying purpose. Grains are removed from plant by threshing or by traditionally i.e
+                                    beating plants with sticks. </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                <p>
+                                    Red gram is intercropped with cereals, oilseeds, short-duration pulses, cotton,
+                                    Sorghum, pearl millet, maize, finger millet, Groundnut, soybean, sesame as well as
+                                    oilseed crops such as cowpea, black gram, chickpea etc.
+                                </p>
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="bajra" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> BAJRA</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/mfETzrXqVjY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Under irrigated conditions, optimum time for planting is from last week of February
+                                    to May. For rainfed areas, sowing can be done from June to August.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Seed rate is 3 kg/ha
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    At time of field preparation add well decomposed cow dung@20ton/acre.15 days after
+                                    sowing, add Nitrogen@30kg/acre in form of Urea@70kg/acre. After each cutting, repeat
+                                    this nitrogen dose. Apply Phosphorus@40kg/acre in form of SSP@240kg/acre in two
+                                    equal splits, first dose in spring and second dose in monsoon.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>
+                                    Bajra is grown rainfed and crop being drought resistant hardly needs any irrigation,
+                                    however it is observed that the yield may be significantly increased by irrigating
+                                    the crop at critical growth stages like maximum tillering, flowering and grain
+                                    filling stage. Therefore light irrigations and efficient drainage is very essential
+                                    for bajra production.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                <p>
+                                    <ul>
+                                        <li>
+                                            <h6>Insect pests:</h6>
+                                            <p>Stem bores and grasshoppers are serious pests of bajra controlled by two
+                                                sprayings with 2 litres of Eldrin 20 c.c and grasshoppers may be
+                                                controlled by dusting the crop with BHC 5 percent.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <h6> Diseases: </h6>
+                                            <p>Downy mildew- for controlling this disease seed treatment with fungicide
+                                                like Dithane Z-78 or M-45 @ 2.0kg/ha in 800-1000 lit. of water.
+                                                Smut- Treatment with Ceresan or Thirum @ 1-2 g/kg seeds is effective.
+                                                Ergot- Seed treatment with 20% common salt solution followed by washing
+                                                with fresh water and then treating with Ceresan or Thirum @ 1-2 g/kg
+                                                seeds is effective
+                                            </p>
+                                            <p>To controlled weeds, do intercropping with suitable legumes.
+                                                Intercropping enriches soils, also provide nutritional fodder to
+                                                cattle’s also take care of weeds.
+                                            </p>
+                                        </li>
+
+                                    </ul>
+                                </p>
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Harvesting should be done after 50 days of sowing. After first cutting, when crop
+                                    height becomes one meter, take second cutting.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                The following intercropping practices were found to be remunerative than sole crop of
+                                pearl millet even under drought or more than normal rainfall in AP.Pearl millet + Red
+                                gram (pigeon pea) 2:1 ratio
+                                Pearl millet + Groundnut 2:4 ratio
+                                Pearl millet + Soybean 4:2 ratio
+                                Pearl millet + Sunflower 4:2 ratio
+                                (2:1 ratio indicates 2 rows of pearl millet and one row of the other crop)
+
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="cotton" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> COTTON</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OqYkr-Bvy18"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>In North and Central India irrigated crop is sown from March-May and rainfed crop in
+                                    June-July with the commencement of the monsoon. In South India the major portion of
+                                    the irrigated and rainfed crop is planted in September-October, whereas the sowing
+                                    of the rainfed crops extended upto November. In Karnataka desi cotton is usually
+                                    sown in August-September.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>3.5-4.0 kg/ha</p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    20% nitrogen and whole phosphorus and potash should be given at the time of sowing
+                                    and 40% nitrogen at the time of square formation and final 40% nitrogen at the time
+                                    of flowering. In case of rainfed cotton fertilizer dose for desi variety is
+                                    50:50:25kg nitrogen, phosphorus and potash per hectare.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas iusto doloribus
+                                    voluptatem incidunt iste dolor, vel reiciendis animi! Iusto nulla deleniti
+                                    reprehenderit obcaecati tempore perspiciatis itaque quaerat voluptatem aspernatur
+                                    dolores.</p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                A) Chemical Insecticides and their doses recommended :
+                                a) Sucking pests : (Aphids, jassids and thrips)
+                                • Soil application of phorate 10 G @ 10 kg/ha or Imidacloprid 70 ws seed treatment @
+                                10gm/kg seed or Thiomethoxam 70ws seed treatment @ 4.28 gm/kg seed
+                                • Spraying of acetamiprid 20 sp @ 15 g.a. % /ha
+
+                                b) For White fly
+                                • Methyl demeton 25EC @ 40 ml /10 lit of water or
+                                • Dimethoate 30 EC @ 33 ml/10lit of water or
+                                • Trizophos 25 EC @ 10 ML /10 lit of water or
+
+                                c) For Bollworms
+                                • Endosulfan 35 /Ec @ 17 ml /10 lit of water or
+                                • Quinalphos 25 EC @ 20 ml /10 lit of water or
+                                • Carbaryl 50 wp @ 40 gms/10 lit of water or
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Cotton is harvested by picking the fully opened bolls. First picking of cotton should
+                                    be done when 30-35% bolls open fully. Picking should be done early in the morning.
+                                    At the time of picking first pick clean cotton and then affected cotton. It should
+                                    be picked separately of different varieties. Second picking should be done 15-20
+                                    days after first picking. After picking it should be dried 3-4 days in sun with due
+                                    care.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                i. Cotton + Green gram / Black gram (1:1 row proportion) <br>
+                                ii. Cotton + Sorghum + pigeon Pea + Sorghum (6:1:2:1 row proportion)
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="gram" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">GRAM</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/OqYkr-Bvy18"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Optimum time of sowing gram is mid October to mid November.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Seed rate of gram varies from 40 to 60 kg/ha.</p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    Manuring with 25-40kg per ha of phosphorus (P2O5) and 25kg per ha of nitrogen (N)
+                                    should be given at the time sowing. Also seed treatment with biofertilizer viz.
+                                    Rhizobium at the rate of 25gram per kg of seed is beneficial.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>Where irrigation facilities are available, give a pre-sowing irrigation. It will
+                                    ensure proper germination and smooth crop growth. After then give second irrigation
+                                    at time of pre-flowering and one at pod development stage. In case of early rain
+                                    delay irrigation and give according to requirement. No tolerance for excess water.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Yellow mosaic virus, application of Phorate in soil before or at sowing @ 1 kg/ha is
+                                required.
+                                Pod borer- spray Triazophos/ Monocrotophus @ 2 ml/ ltr of water, Carbaryl@ 2 kg/ha
+                                Aphids- Spray methyl dementon 25 EC @ 1000 ml/ha
+                                White fly -Spray the crop with Imidacloprid @ 1 ml/3.5 ltrs of water/Flonicamid-200gm/Ha
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>When plant gets dry and leaves turn reddish brown and start shedding, plant is ready
+                                    to harvest. Cut the plant with sickle. Sundry the harvested crop for five to six
+                                    days. After proper drying, carry out threshing by beating the plants with sticks or
+                                    by trampling under the feet of bullocks.
+                                    Grains of harvested crop must be well dried before storage. And take care to avoid
+                                    the pulse beetle infestation in storage.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Wheat, jowar, Barley, Linseed can be used for intercropping with Gram
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="groundnut" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> GROUNDNUT</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/E8ummcDis6Y"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Groundnut is raised mostly as a rainfed kharif crop, being sown from May to June,
+                                    depending on the monsoon rains.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Normal seed rate in ground nut is 40 kg
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    Fertilizer recommended for rainfed crop is 6.25 tonnes farmyard manure and 10-25kg
+                                    nitrogen (N), 20-40kg phosphorus (P2O5) and 20-40kg potash (K2O) per hectare. The
+                                    application of nitrogen (N) in two equal splits doses, one before sowing and the
+                                    other 30 days after sowing. The application of a culture of Rhizobium as seed
+                                    treatment is beneficial in increasing nodulation and nitrogen fixation. The
+                                    application of gypsum at 500kg per ha at the pegging stage will enhance pod
+                                    formation.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p> For the irrigated groundnut, the frequency of irrigation depends on the soil
+                                    texture, and the interval between irrigation ranges from 8-12 days.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Leaf-miner : Dust, 4% Carbaryl,
+                                Groundnut aphid: Spray 0.03% Dimethoate or Phosphamidon, Monocroptophos or
+                                Methyl-demeton
+                                White grub: Grubs very difficult to kill; the application of 10% Phorate granules is to
+                                be effective.
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>The prominent symptoms of maturity are the yellowing of leaves, the shedding of the
+                                    older leaves, the development of the proper colour of the testa and a dark tint
+                                    inside the shell. The bunch and semi-spreading varieties are usually harvested by
+                                    hand pulling when there is adequate moisture in the soil. The pulled out plants are
+                                    stacked for a few days for drying and are stripped afterwards.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Groundnut + Sorghum: to be sown in the ratio 4 : 1 or 6 : 2 <br>
+                                Groundnut + Redgram: to be sown in the ratio 6 : 1 or 10 : 2
+
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="jowar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">JOWAR</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/xOBlO6o3nWI"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>1.Rabi Jowar is sown from 15th September to 15th October. <br>
+                                    2.Optimum sowing time for un-irrigated rabi jowar is second fortnight of September
+                                    if there is sufficient moisture in soil for good germination and growth.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Required plant population may be obtained by using a seed rate of 8-12 kg/ha.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    An optimum dose of nitrogen for rainfed high yielding and local varieties of
+                                    irrigated crop should be 60-80kg/ha. On an average a dose of 40-60 kg P2O5/ha is
+                                    found to be good. Potash at the rate of 40kg/ha applied at the time of field
+                                    preparation gives good result.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>Sorghum is a fairly drought resistant crop and it does very well in areas receiving
+                                    50 cm well distributed rainfall but it cannot withstand water logging at any stage
+                                    of crop growth.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Given below are the most common diseases and pests affecting Jowar crop and their
+                                control methods.
+                                Stem borer- lindane or carbaryl application in leaves
+                                Shoot fly- seed treatment with disulfoton or carbofuran
+                                Midge- endosulfan or lindane spray
+                                Downy mildew- Dithane spray
+                                Grain smut- seed treatment with agrosan or ceresan
+                                Ergot- ziram application.
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>The usual varieties which cultivated mature at four months. Harvest the crop once the
+                                    grains are mature and fully ripe. The crop will be ready in single cut varieties for
+                                    harvesting @ 65 to 75 days after sowing (50%, flowering stage). In multi cut
+                                    varieties, first cut should be done @ 45-50 days and subsequent cuts should be
+                                    carried at 1 month intervals.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Sorghum crop in general should be rotated with other cereals like maize, pearl millet
+                                (bajra) or minor millets or preferably with legumes like groundnut.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="maize" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> MAIZE </h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YRE5yFP7og0"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Kharif: Last week of June to first fortnight July
+                                    Rabi: Last week of October for inter cropping and up to15th of November for sole
+                                    crop
+                                    Spring: First week of February
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Sweet corn: Use seed rate of 8 kg/acre
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    Winter Maize: For optimum yield apply Super phosphate@150 kg, 155 kg of Urea and 20
+                                    kg of Potash per acre.
+
+                                    Apply whole dose of P and K fertilizer and 1/3rd amount of Urea fertilizer at time
+                                    of sowing. Give remaining quantity of Urea in two equal spilts. Apply 1/3rd of Urea
+                                    in mid-January and remaining 1/3rd at time tasseling stage.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>3-4 weeks after germination apply first irrigation. Apply remaining irrigation at
+                                    intervals of 4-5 weeks upto mid-March. Additional 1 or 2 irrigations are required
+                                    depending rainfall and temperature conditions.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                (A) Diseases:
+                                Leaf Blight: Manifestation of oval to round, yellowish-purple spots on leaves. The
+                                affected leaves dry up and appear as if burnt.
+                                Control:
+                                The crop can be sprayed with Dithane M-45 or Indofil @ 35-40 gms or Blue Copper @55 -60
+                                gms in 18 litres water, 2 -3 sprays at 15 days interval,
+
+                                (B) Insect Pests:
+                                1) Stem borer: These borers feed on leaves in the earlier stages. Later on they bore
+                                into the stem and cobs, rendering the plant unproductive.
+                                Control:
+                                - After harvest, the stalks and stubbles should be collected from the field and burnt.
+                                - Crop can be sprayed twice with Thiodan 35 EC @ 27 ml in 18 litres water, once 20-25
+                                days after germination and the second spray at the time of grain formation (in endemic
+                                areas).
+
+                                2) Red Hairy Caterpillars: Caterpillars feed and destroy the whole plant if the attack
+                                is in the early stages of growth.
+                                Control:
+                                - Egg masses and young caterpillars should be collected as soon as detected, and
+                                destroyed.
+                                - The field should be ploughed out after the crop is harvested, so as to expose pupae.
+                                - Thiodan 35 EC @ 27 ml in 18 litres water should be sprayed only as last resort.
+
+                                3) Aphids: Tiny, soft bodied insects, usually green in colour. Nymphs and adults suck
+                                the sap from leaves and young shoots.
+                                Control:
+                                The crop can be sprayed with Rogor 30 EC @ 18 ml in 18 litres water.
+
+                                4) Grass hoppers: Short-winged hoppers, laying eggs in the soil at a depth of 7.5 to 20
+                                cms, adults feed on foliage.
+                                Control:
+                                Thiodan 35 EC @ 25 ml or Ekalux 25 EC@ 28 mi in 18 litres water can be sprayed.
+
+                                5) Termites: These pests attack young seedlings as well as mature plants; attack is also
+                                visible on roots and lower parts of the plants.
+                                Control:
+                                Thiodan 4 % Dust @ 12-15 kg per hectare is applied and mixed well with the soil.
+
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Harvesting should be done when cobs outer cover turns from green to white. Corn is
+                                    ready for harvest when the ear is full size for the variety, has a tight husk, and
+                                    has somewhat dried silks. The kernels are fully developed and exude a milky liquid
+                                    when punctured. Whether harvesting is done by hand or machine, sweet corn should be
+                                    collected at night or early in the morning.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Pea can be taken as intercrop in maize plant. For that take one row of pea between maize
+                                crops. In autumn sugarcane and maize can be intercropped. Sow one row of maize plant
+                                after two row of sugarcane.
+
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="moong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> MOONG</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Zf1TRvcuPhg"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>The kharif crop is sown in June to July.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>For Kharif season, use seed rate of 8-9 kg/acre whereas for summer season used seed
+                                    rate of 12-15 kg/acre.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    5 kg of Nitrogen (12 kg of Urea), 16 kg of P2O5 (100 kg of Superphosphate) should be
+                                    applied per acre at time of sowing. Seed treatment with biofertilizer viz. Rhizobium
+                                    at the rate of 25gram per kg of seed is beneficial.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>Being kharif crop green gram is not required irrigation unless there is dry spell
+                                    during the kharif season. In summer irrigation should be given according to soil
+                                    type. Irrigation interval should be 8-10 days in summer.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Pest
+                                1. Aphids
+                                The nymphs and adults suck the sap. The affected leaves turns yellow, get wrinkled and
+                                distorted. Spraying with 0.05% Endosulfan, 0.02% Phosphamidon, 0.03% Dimethoate, Methyl
+                                demeton or Thiometon control the pest effectively.
+
+                                2. Thrips
+                                The adults and nymphs feed on leaves. As a result, light brown patches appear on
+                                infested leaves. The affected leaves curl and become dry. Spraying with 0.05%
+                                Endosulfan, 0.02% Phosphamidon, 0.03% Dimethoate, Methyl demeton or Thiometon control
+                                the pest effectively.
+
+                                3. Pod borer
+                                Caterpillars feed on tender foliage and young pods. They make holes in the pods and feed
+                                on developing seeds by inserting anterior half portion of their body inside the pods.
+                                Spraying the crop with 0.05% Quinalphos or Fenitrohion can successfully control the
+                                pest. Spray with HaNPV @ 250 LE/ha.
+
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Best time of harvesting when 85% of pods get matured. When pods are turned into black
+                                    colour, two to three pickings are done. Pickings should be carried out only during
+                                    morning hours.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                <p>Urdbean, mungbean and cowpea are quite compatible.
+                                    It is also grown as mixed crop with pearl millet, sorghum, maize and cotton.</p>
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="nigerseed" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> NIGERSEED</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/dzkmZfAPx44"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Optimum sowing time in Maharashtra July to early September (after kharif crop)
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Adopt a seed rate of 5 kg/ha
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    Four tonnes of FYM and 20 kg N/ha at sowing.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>It is invariably grown in the rainy season and it is seldom irrigated. There are
+                                    indications that niger yields can be doubled under irrigation, it the crop suffers
+                                    from moisture stress. Irrigation may be given at the seedling stage.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Stem borer : spray nursery bed once at 15-20 days after germination with Chlorpyrifos or
+                                Monocrotophos @ 40ml/ 10 cm nursery area.
+                                Before transplanting apply Phorate @ 0.5kg or Carbofuran 3G 1.2 kg/ha.
+                                Aphids- Spray Methyl Demeton @1000 ml/ha at pre flowering stage.
+                                Ear caterpillars- Dust crop with Malathion 5% @ 25 kg/ha
+                                Diseases
+                                Finger millet is affected by a variety of diseases of which blast caused by Pyricularia
+                                Grisea is the major problem.
+                                If necessary spraying the nursery with carbendazim (0.05%) or kitazin (0.1%) or
+                                Edifenphos (0.1%) or Saaf (0.2%)
+                                Spray any of the above fungicides at 50 per cent flowering and repeat 10 days later if
+                                Kitazin or Edifenphos were used to control neck and finger blast.
+                                In recent years, brown spot caused by Drechslera Nodulosa is gaining importance. Its
+                                damage could be severe if the crop is subjected to drought or nutrition deficiency. The
+                                disease can be effectively managed by proper nutrition and water management.
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Niger usually matures in 95-105 days after sowing. The crop should be harvested when
+                                    the leaves dry up and the capitula turns brownish / blackish in colour
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                <p>Nigerseed and Black gram/Green gram(2:2)
+                                    Nigerseed and Ragi(6:3)
+                                </p>
+
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="ragi" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> RAGI</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Wz6-4Gd7AyU"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem, alias?
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Seed rate is 15-20 kg per hectare
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    40:20:20 NPK kg/ha for short duration varieties cultivated under rainfed conditions;
+                                    Entire P 2 O 5 and K 2 are to be applied at the time of sowing.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p> 1st: Immediately after sowing
+                                    2nd: 4th day after sowing
+                                    3rd: 9th day after sowing
+                                    4th: 16th day after sowing
+                                    17th day after sowing
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Insects
+                                Finger millet attracts several pests of which army worm, cutworm, stemborer, leaf aphid,
+                                grasshoppers, grey weevil, shootfly and ear caterpillars are important.
+                                Stem borer : spray nursery bed once at 15-20 days after germination with Chloropyriphos
+                                or Monocrotophos @ 40ml/ 10 cm nursery area.
+                                Before transplanting apply Phorate @ 0.5kg or Carbofuran 3G 1.2 kg/ha.
+                                Aphids- Spray Methyl Demeton @1000 ml/ha at pre flowering stage.
+                                Ear caterpillars- Dust crop with Malathion 5% @ 25 kg/ha
+                                Diseases
+                                Finger millet is affected by a variety of diseases of which blast caused by
+                                Pyriculariagrisea is the major problem. The disease is quite severe in kharif crop at
+                                all the growth stages. The losses caused will be more if the disease appears in the
+                                nursery and on the ears affecting the neck and fingers.
+                                Treating seeds with fungicides like carbendazim @ 2g/kg a day before sowing
+                                If necessary spraying the nursery with carbendazim (0.05%) or kitazin (0.1%) or
+                                Ediphefos (0.1%) or Saaf (0.2%)
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Ragi matures 3 to 5 months after sowing, depending on variety, season and soil
+                                    properties.
+                                    When the earhead on the main shoot and 50% of the earheads on the crop turn brown,
+                                    the crop is ready for the harvest.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Inter cropping always brings good returns .some of the best intercrop combination of
+                                Finger Millet is mentioned below.
+                                Finger Millet + maize = Highest yield.
+                                Finger Millet + field bean or Fodder sorghum = Enhancing the productivity.
+                                Finger Millet + Pigeon pea = Higher returns.
+                                Finger Millet + black gram or green gram = Profitable crop combinations.
+                                Finger Millet + mustard = Profitable.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="mustard" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> MUSTARD</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/9qIfSoGQ3CE"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Optimum time for sowing Mustard crop is from September to October month.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>When rapeseed - mustards are grown individually then it required seed rate of 1.5 kg
+                                    seeds per acre.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    And 60-90kg N, 60 kg P2O5 and 40 kg K2O per hectare.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p> Pre_soaking irrigations should be given before sowing the seeds. irrigations should
+                                    be applied at 4 weeks interval after sowing the seeds.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Control of aphids in mustard by neem twigs in Folido. Farmers prepare ash from leaves
+                                and small twigs of neem and incorporate it in Folidol (a chemical pesticide) powder. The
+                                mixture is dusted on mustard to minimize infestation
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Harvesting should be carried out as soon as the pods begins to turn yellow color and
+                                    seed becomes hard. The mustard crop matures in about 110 to 140 days. Harvesting
+                                    should be done in the early morning hours to avoid any shattering of seed. Use
+                                    sickle to cut the crop close to the ground.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Mustard can be grown as a mixed crop with gram, wheat and lentils. If you are planning
+                                mustard as an inter crop, one line of mustard and four lines of gram or one line of
+                                mustard and nine lines of wheat should be sown.
+
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="rice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle"> RICE</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/qHIKRwYe3Cs"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Rice cultivated during rabi season is also called as ‘summer rice’. It is sown in the
+                                    months of November to February
+                                    The pre-kharif or ‘autumn rice’ is sown during May to August
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>40 to 60 grams of seed per square metre
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>Farm yard manure/Compost: 10 to 15 cartloads
+                                    Nitrogen: 100 to 150 kg/Ha.
+                                    Phosphorous: 50 to 60 kg P205/Ha
+                                    Potash: 40 to 50 kg KO/Ha
+                                    Zinc sulphate: 25 kg/Ha
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p> 120 to 150 lakhs liters per hectare to produce 7 tonnes of rice. During initial
+                                    period, paddy field requires abundant water supply especially in wet lands. Water
+                                    supply should be reduced periodically before harvesting the crop.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Blast: Fungii
+                                Spindle-shaped spots on leaves with grey centers.
+                                Nodes rot turning black and thus breaks.
+                                Management
+                                Soak the seeds in carbendazim for 12 hours before sowing.
+                                Use resistant varieties.
+                                Brown Spot: Dark brown, oval spots on stems, leaves and plumes.
+                                Since it occurs in deficient soils, the deficiency must be corrected by adding nutrients
+                                and fertilizers.
+                                Resistant varieties must be cultivated in deficient soils.
+                                Treating the seeds with Agrosan is also effective in controlling the disease.
+                                Bacterial Blight
+                                Yellow to white lesions along the margin gradually spreading around the whole leaf.
+                                Soak the seeds in Streptocycline for 12 hours before planting.
+                                Affected crops are sprayed with Agrimycin 100.
+                                Udbatta Disease
+                                Fungus attacks panicles and spikelets stick together. Hence no grains are formed.
+                                Treat the seeds with carbendazim before planting. The affected seeds can also be sprayed
+                                with it during the initiation of panicle.
+                                Sheath Blight
+                                Affects the sheath of the leaves.
+                                The affected parts are blighted.
+                                Being soil-borne disease, planting closely must be avoided.
+                                Avoid applying heavy nitrogen fertilizers.
+                                Spray the affected crop with carbendazim
+
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>For harvesting, early to medium varieties, 26 to 30 days after flowering and 36 to 40
+                                    days after flowering in case of tall varieties are recommended. Field paddy is to be
+                                    harvested when the moisture content of the rice grain is 20 to 25%. Gradual drying
+                                    should be carried out in shed for better recovery.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima praesentium sunt iusto
+                                corrupti voluptatum sapiente porro totam, placeat ducimus repudiandae?
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="safflower" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">SAFFLOWER</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Y5CFyq1DETU"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Optimum time for sowing seeds is last week of October to first week of November.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>For sowing, use seed rate of 6 kg for one acre.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>Apply 16 kg N (35 kg urea) per acre.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>Water is necessary during the flowering stage so once irrigation is required in 30
+                                    days for better yield. For area where soil is less moist, apply one heavy pre-
+                                    sowing irrigation, it will be beneficial for better growth.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Green peach aphid (Myzus persicae): Its appearance is like burnt on the plant.
+                                Safflower aphid: These are seen on tender shoot, leaves as well as stem it make the
+                                plant look weak and some areas are dried up.
+                                Control: Spray 100 ml Chlorpyriphos 20EC in 100 ltr of water/acre. If required can be
+                                repeated even after 15 days.
+                                Wilt and heat rot: In this plant turn yellow later with brown and finally die. Sclerotic
+                                are fungus type which is seen on the crown, adjoin root areas, and stem.
+                                Control: Use Healthy and disease free seeds. Soil should not be piled up around stem in
+                                rainy season.
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Safflower matures in 150-180 days. Harvesting should be done in mid-May when the
+                                    flowers turn in yellow brown in color.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Intercropping of safflower with gram or linseed in 6:3 or 3:3 row proportion (30cm) and
+                                two rows of safflower paired (30/60 cm) plus one row of gram or linseed is profitable.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="sesamum" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">SESAMUM</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Et2wxn8D2yU"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Kharif: Second fortnight of June to July
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Adopt a seed rate of 5 kg/ha.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    Spread FYM or composted coir pith or compost @ 12.5 t/ha evenly on the unploughed
+                                    field and plough it in.
+                                    Apply full dose of N, P and K basally. Add 5 kg of Manganese sulphate per hectare.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>In case of irrigated crop, give the first irrigation after sowing and second 25-30
+                                    days after sowing when the plants are 15cm tall. It is essential to irrigate the
+                                    crop during flowering and capsule formation stage.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Insect pests
+                                Leaf-roller and pod-borer
+                                It feed on the leaves and take shelter inside webs.
+                                Control
+                                Spraying endosulphon (35%, 2 ml/litre of water) is recommended to control this pest.
+                                Gall-fly
+                                The larvae of gall-fly eat the floral parts and affect seed setting.
+                                Control
+                                Dusting of 10% carbaryl at 12 kg/ha or spraying endosulphon or ekalux (2ml/litre) helps
+                                in controlling the pest.
+                                Disease
+                                Leaf spots
+                                Leaf spots appear at all stages of the crop.
+                                Control
+                                Using resistant varieties and seed treatment with thiram at 3 g/kg seed are the best
+                                ways to avoid the disease. Spray mancozeb (dithane M-45) 2g/litre of water to contain
+                                the disease.
+                                Phytophthora blight
+                                Small water soaked irregular brown spots appear on the leaves which dry up and wither.
+                                Capsules of heavily affected plants do not produce seeds.
+                                Control
+                                It can be controlled by spraying 0.3% blitox for its control.
+                                Root/stem rot
+                                The rot and collar regions of the stem become brown. Gradually the whole Plant turns
+                                brown.
+                                Control
+                                Avoid monocropping, spraying carbendizm (bavistin) 1g or mancozeb at 2 g per litre of
+                                water will help to control the disease.
+                                Powdery mildew
+                                Under moist and cool conditions, the disease develops fast covering the leaves with
+                                mycelium. The plant is defoliated before maturity.
+                                Control
+                                Spread 0.2% wettable sulphur
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>The colour of the stem turns yellow. Harvest before the bottom capsules turn brown.
+                                    Pull out the plants from the bottom. Stack in the open, one over the other in a
+                                    circle with the stems pointing out and the top portion pointing inside. Dry the
+                                    plants for one more day and again shake the plants. All the mature seeds will fall
+                                    off.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Sesame+Pearlmillet / Black gram (3:1)
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="soyabean" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">SOYABEAN</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/gVUHm3hC0XY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>In case of Kharif season most common time of sowing is onset of monsoon or last week
+                                    of June to first week of July.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Use seed rate of 25-30 kg for sowing in one acre land.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    Apply 20 kg N and 80 kg P2O5 and 40 kg K2O per ha 40 kg of S as gypsum (220 kg/ha) /
+                                    ha as basal dressing. Soil application of 25 kg ZnSo4/ha under irrigated conditon.
+                                    Foliar spray of NAA 40 mg/litre and Salicylic acid 100 mg/litre once at
+                                    pre-flowering and another at 15 days thereafter
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>Overall crop required three to four irrigation. Irrigation at time of pod filling
+                                    stage is necessary. Water stress at this period will affect yield drastically. Apply
+                                    irrigation depending upon rainfall conditions. No irrigation required in good
+                                    rainfall conditions.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Pest of soybean
+
+                                Bihar hairy caterpillar: Spilosoma obliqua
+
+                                Soybean Aphid: Aphis spp.
+
+
+                                Gram pod borer: Helicoverpa armigera
+
+                                Jassids: Apheliona maculosa
+
+                                Tobacco caterpillar: Spodoptera litura
+
+                                Girdle beetle: Oberea (Obereopsis) brevis
+
+                                Thrips: Thrips tabaci
+
+                                Stem Fly: Melanagromyza sojae
+
+                                White fly: Bemisia tabaci
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Harvest the crop with sickle or by hand. After harvesting, carry out threshing
+                                    operation.
+                                    Signs of maturity- Dropping of leaves, leaves turn yellow, moisture content of seed
+                                    15%
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Mixed with maize, sesamum etc. Inter cropping with Tur, Cotton, drilled paddy sorghum,
+                                cotton, sugarcane. It can be rotated with wheat, potato, gram, tobacco
+
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sugarcane" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">SUGARCANE</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lbJPKm8lEvY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>February-March(spring) and July(adsali).
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>60-80 Q/ha</p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    Apply half to two-thirds of the nitrogen in the form of bulky organic manures, such
+                                    as farmyard manure, compost, green manure or tree leaves, and the remainder in the
+                                    form of ammonium sulphate or oil-cakes or a combination of the two. 400:170:170 kg
+                                    nitrogen, phosphorus and potash per hectare is recommended respectively.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>In tropical area, irrigations are to be given once in 7 days during germination phase
+                                    (1 –35 days after planting), once in 10 days during tillering phase (36 – 100 days
+                                    after planting), again once in 7 days during grand growth phase (101 – 270 days
+                                    after planting) and once in 15 days during maturity phase (271 days after planting
+                                    up to harvest) adjusting it to the rainfall pattern of the area.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                At the time planting: Using a rose can apply 2-litre Chlorpyriphos per acre in 350-400
+                                litre water over the seeds placed on furrows to control termite and early shoot borer.
+                                During april to july: During april-may give root drenching of Rynayxpyx 20SC @ 150
+                                ml/acre with 400 litre water to control top borer or apply Carbofuran @ 13 kg/acre
+                                during last week June or first week of July
+                                During August: If root borer problem is noticed apply Chlorpyriphos @ 2 litres/acre
+                                Follow intergrated pest management(IPM)
+
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p> As far as possible harvesting should be carried out avoiding extremes of weather. In
+                                    sub tropical of India, it has been shown that spring harvested plant crop- would
+                                    result in a better ratoon then that obtained by harvesting in the autumn. Sugarcane
+                                    crop is harvested after attending maturity, generally it starts from the month of
+                                    Oct and continue till the month of May in sub-tropical states where in Tropical
+                                    states it starts from the month of Dec and continue till the month of May
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, reprehenderit!
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="sunflower" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">SUNFLOWER</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/lbJPKm8lEvY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>August to mid of October.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>one can sow about 5 to 7 kg of sunflower seeds per hectare land
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    The crop performs best when both organic and inorganic fertilizers are applied to
+                                    it. The fertilizer Nitrogen:Phosphrous:Potash (NPK) schedules recommended in the
+                                    case of rainfed and irrigated crops are 20:30:20 and 40:60:40 kg (NPK) of per
+                                    hectare, respectively.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>
+                                    If you are growing sunflowers as Kharif crop, then there is no need for any
+                                    irrigation to this crop, but supply once if there is uneven rainfall in your
+                                    surroundings.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Grasshopper: Spray or dust endosulphan 35 E.C. 1000ml in 500 litre water per hectare or
+                                dust cabaryl 10% 25kg per ha.
+                                Leaf-rust and alternaria leaf-spot: Spray 0.1% of either Dithane M-45 or Dithane Z-78
+                                Root-rot: The root-rot is controlled by drenching the soil with either Brassical or wet
+                                ceresan
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>The sunflower crop matures in 90-100 days. The crop has to be harvested when the
+                                    lower side of the head turns yellow and some of the bracts dry up. The mature heads
+                                    are cut with a sickle and are dried by exposing the upper side with seeds to the
+                                    sun. The well-dried heads are beaten with sticks to separate the seeds. The cleaned
+                                    seed is dried well and stored in gunny bags. The sunflower crop gives a grain yield
+                                    of 300-500 kg per ha under rainfed conditions and 800-1200 kg per ha when grown
+                                    under irrigation.
+
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariaturmquam ducimus, quaerat
+                                in, quis doloribus accusamus sunt.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="urad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">URAD</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/4_LpPOCO9Yo"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Second fortnight of June (15to 30 June) is the proper time of black gram sowing in
+                                    kharif season.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Kharif: 12 to 15 kg / ha
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    The recommended fertilizer dose for black gram is 20:40:40 kg NPK/ha. Fertilizer
+                                    dose should be applied as per soil test report.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>Number and frequency of irrigation depend upon the soil type and weather. The crop
+                                    should get irrigation at an interval of 10-15 days. From flowering to pod
+                                    development stage, there is need of sufficient moisture in the field.
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                YM virus: Grow resistant varieties like Pusa-1, KM-2. Spray Metasystox & Melathion
+                                Leaf curl: 2-3 sprays of Metasystox at 10 days interval
+                                Seed/seedling rot: Seed treatment with Thiram/carbendazim 2.5 g/kg seed.
+                                Anthracnose: Spray Mancozeb/zineb @2 kg in 1000 lit. of water
+                                Hairy caterpillar: Dusting 2n % methyl parathion @25-30kg/ha
+                                Leaf hopper: Basal application of Phorate @10 kg/ha. Spray monocrotophos @1ml/lit.water.
+                                Jassids: Basal application of Phorate @10 kg/ha. Spray monocrotophos @1ml/lit.water.
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Urd should be harvested when 70-80 % pods matured and most of the pods turn black.
+                                    Over maturity may result in shattering. Harvested crop should be dried on threshing
+                                    floor for few days and then threshed. Threshing can be done either manually or by
+                                    trampling under the feet of bullocks.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="wheat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLongTitle">WHEAT</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center pb-4 pt-4">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/_ULc_pkwMPA"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <p>
+                        <ol>
+                            <li>
+                                <h5> TIME OF SOWING :</h5>
+                                <p>Wheat must be sown at the optimum time. The time of sowing is 25 October – November.
+                                </p>
+                            </li>
+                            <li>
+                                <h5>SEED RATE :</h5>
+                                <p>Use seed rate of 45 kg per acre. The seed should be cleaned and graded thoroughly
+                                    before sowing
+                                </p>
+                            </li>
+                            <li>
+                                <h5> FERTILIZERS :</h5>
+                                <p>
+                                    With assured fertilizer supply:
+                                    Nitrogen (N) @8- - 120 kg/ha
+                                    Phosphorus (P2O5) @ 40- 60 kg/ha
+                                    Potash (K2O) @ 40 kg/ha.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>IRRIGATION :</h5>
+                                <p>1st irrigation: 20-25 days
+                                    2nd irrigation: 40-45 days
+                                    3rd irrigation: 60-65 days
+                                    4th irrigation: 80-85 days
+                                    5th irrigation: 100-105 days
+                                    6th irrigation: 115-120 days
+                                </p>
+                            </li>
+                            <li>
+                                <h5> PROTECTION :</h5>
+                                Rice-groundnut, sorghum can be cultivated with wheat
+                            </li>
+                            <li>
+                                <h5>HARVESTING : </h5>
+                                <p>Harvesting of high yielding dwarf variety is carried out when leaves and stem turn
+                                    yellow and become fairly dry. To avoid loss in yield crop should be harvested before
+                                    it is dead ripe. For manual harvesting use serrate edge sickles. Combines harvester
+                                    are also available which can do harvesting, threshing and winnowing of wheat crop in
+                                    single operation.
+
+                                </p>
+                            </li>
+                            <li>
+                                <h5>MULTICROPPING OR INTERCROPPING :</h5>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing.
+                            </li>
+                        </ol>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 pt-5">
+            <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+            <h2 class="section_main_title text-center" style="font-weight: 400;"><i class="fab fa-think-peaks"
+                    style="font-size: 1.5em;"></i> CROPS THAT WE <strong> RECOMMEND :</strong></h2>
+
+            <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;margin-bottom: 3%;">
+        </div>
+    </div>
+
+    <div class="row flex-container">
+        <nav class="nav flex-row ">
+            <button type="button" class="btn btn-outline-light m-1" data-toggle="modal" data-target="#arhar">
+                Arhar</button>
+            <button type="button" class="btn btn-outline-light m-1" data-toggle="modal" data-target="#bajra">
+                Bajra</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#cotton">
+                Cotton</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#gram">
+                Gram</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#groundnut">
+                Groundnut</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#jowar">
+                Jowar</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#maize">
+                Maize</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#moong">
+                Moong</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#mustard">
+                Mustard</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#nigerseed">
+                Nigerseed</button>
+        </nav>
+    </div>
+    <div class="row p-5">
+
+        <div class="col-md-12" style="margin-top:-2%;">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/arhar1.jpg' %})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/bajra.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/cotton1.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/gram.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/groundnut1.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/jowar1.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/maize1.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/moong.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/nigerseed.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/ragi.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/mustard1.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/rice.webp'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/safflower1.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/sesamum.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/soybean.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/sugarcane1.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/sunflower.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/urad.jpg'%})">
+                    </div>
+                    <div class="swiper-slide"
+                        style="background-image:url({% static 'HomePage/images/crops/wheat1.jpg'%})">
+                    </div>
+
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="row mb-4 flex-container ">
+        <nav class="nav flex-row ">
+            <button type="button" class="btn btn-outline-light m-1" data-toggle="modal" data-target="#ragi">
+                Ragi</button>
+            <button type="button" class="btn btn-outline-light m-1" data-toggle="modal" data-target="#rice">
+                Rice</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#safflower">
+                Safflower</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#sesamum">
+                Sesamum</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#soyabean">
+                Soyabean</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#sugarcane">
+                Sugarcane</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#sunflower">
+                Sunflower</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#urad">
+                Urad</button>
+            <button type="button" class="btn  btn-outline-light m-1" data-toggle="modal" data-target="#wheat">
+                Wheat</button>
+
+        </nav>
+    </div>
+</div>
+
+<script src="{% static 'HomePage/js/swiper.min.js'%}"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 20,
+            depth: 90,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
+</script>
+
+{% endblock %}

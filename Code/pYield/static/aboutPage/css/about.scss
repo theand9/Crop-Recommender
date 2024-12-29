@@ -1,0 +1,260 @@
+body{
+    background: #00F260;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #0575E6, #00F260);
+    // margin-top: 150px !important;
+    // box-sizing: border-box;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.about-section{
+    .container-fluid{
+        padding-right: 0;
+        padding-left: 0;
+        .topImage{
+            margin-bottom: 4%;
+            img{
+                height: 100vh;
+                width: 100%;
+            }
+            .layer {
+                background-color: rgba(0,0,0, 0.6);
+                position: absolute;
+                height: 100vh;
+                width: 100%;
+
+                }
+        }
+        .section-title
+        {
+            hr{
+                margin-left: -2%;
+            }
+
+            .section_main_title{
+                margin-top: 0;
+                margin-bottom: 20px;
+                font-size: 2.5em;
+                line-height: 1.27;
+                font-weight: 300;
+                margin-left: -2%;
+
+                strong{
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .about-box{
+            -webkit-box-shadow: 0 0 0 10px #000000 inset;
+            box-shadow: 0 0 10px 10px #000000 inset;
+
+            height: 28.125em;
+            position: relative;
+            display: block;
+            width: 26em;
+            margin: 1em;
+
+            .videopopup img{
+                 transform: translateY(30px) translateX(-30px);
+                -webkit-transform: translateY(30px) translateX(-30px);
+                width: 25em;;
+                z-index: 1;
+                position: relative;
+                height: 28.125em;
+                margin: 1em;
+                border: 10px solid #fff;
+
+            }
+        }
+    }
+
+    hr{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+    .about-team{
+       background-color: #fff;
+
+        padding-bottom: 80px;
+        margin-top: 10%;
+        h2{
+            font-size: 2.5em;
+            text-transform: uppercase;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 400;
+        }
+        .container{
+            padding: 50px 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+            .testimonial{
+
+                text-align: center;
+                padding: 30px 30px 50px;
+                position: relative;
+
+
+                .icon{
+                    font-size: 60px;
+                    opacity: 0.7;
+                    margin-bottom: 0.2em;
+                }
+                .description{
+                    font-size: 1em;
+                    color: #000;
+                    text-align: justify;
+                    margin-bottom: 30px;
+                    opacity: 0.9;
+                    letter-spacing: -1px;
+                }
+
+                .testimonial-content{
+                    position: absolute;
+                    left: 0;
+                }
+
+                .pic{
+                    display: inline-block;
+                    border: 6px solid #fff;
+                    border-radius: 50%;
+                    box-shadow: 0 0 2px 2px #f4770b;
+                    overflow: hidden;
+                    z-index: 1;
+                    position: relative;
+                    margin-left: 120px;
+
+
+
+                    img{
+                        height: auto;
+                        width: 100%;
+                    }
+
+                    img{
+                        width: 100px !important;
+                        height: 100px;
+                    }
+                }
+
+                .title{
+                    font-size: 15px;
+                    font-weight: bold;
+                    color: #000;
+                    text-transform: capitalize;
+                    margin: 0 0 8px 130px;
+
+                }
+
+                .post{
+                    display: block;
+                    font-size: 14px;
+                    color: #000;
+                    margin: 0 0 8px 130px;
+
+                }
+
+
+            }
+
+            .testimonial:before,
+            .testimonial:after{
+                content: "";
+                border-top: 70px solid #000;
+                border-right: 310px solid transparent;
+                position: absolute;
+                bottom: -10%;
+                left: 0;
+
+            }
+
+            .testimonial::after{
+                border-right: none;
+                border-left: 340px solid transparent;
+                left: auto;
+                right: 0;
+            }
+        }
+
+
+    }
+
+
+.scope-section{
+    width: 100%;
+    height: auto;
+    // background-color: #fff;
+    padding-top: 30px;
+    .image-mh{
+        img{
+            height: 100%;
+            width: 100%;
+            padding-bottom: 30px;
+            padding-left: 2em;
+            padding-right: 2em;
+
+        }
+    }
+    .scope-title{
+        .scope_main_title{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 2.2em;
+            line-height: 1.27;
+            font-weight: 300;
+            margin-left: 1em;
+            strong{
+                font-weight: 600;
+            }
+        }
+
+        .scope-content{
+            padding: 2em;
+
+            li{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+
+
+}
+
+.philosophy-section{
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    .philosophy-content{
+        padding-left: 35px;
+
+        .ph-thought{
+            font-size: 2em;
+            font-weight: 700;
+            color: #0575e5;
+        }
+    }
+    .philosophy_main_title{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 40px;
+        line-height: 1.27;
+        font-weight: 300;
+
+        strong{
+            font-weight: 600;
+        }
+    }
+
+    .ph-Image{
+        img{
+        width: 150px;
+        height: 150px;
+        margin-left: 50px;
+        }
+    }
+}

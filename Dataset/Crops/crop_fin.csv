@@ -1,0 +1,20 @@
+Crop,Crop_Arhar,Crop_Bajra,Crop_Cotton,Crop_Gram,Crop_Groundnut,Crop_Jowar,Crop_Maize,Crop_Moong,Crop_Mustard,Crop_Nigerseed,Crop_Ragi,Crop_Rice,Crop_Safflower,Crop_Sesamum,Crop_Soyabean,Crop_Sugarcane,Crop_Sunflower,Crop_Urad,Crop_Wheat, Time to Grow, Season
+Arhar,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,Kharif
+Bajra,0,1,0,0,0,0,0,0,0,0,0,0,,0,0,0,0,0,0,4,Kharif
+Cotton,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,7,Kharif
+Gram,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,Rabi
+Groundnut,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,Kharif
+Jowar,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,5,Rabi
+Maize,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,4,Rabi
+Moong,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,Kharif
+Mustard,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,5,Rabi
+Nigerseed,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,3,Kharif
+Ragi,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,6,Kharif
+Rice,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,6,Kharif
+Safflower,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,4,Rabi
+Seasamum,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,4,Kharif
+Soyabean,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,5,Kharif
+Sugarcane,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,15,Whole Year
+Sunflower,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,4,Rabi
+Urad,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,3,Kharif
+Wheat,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,5,Rabi

@@ -1,0 +1,19 @@
+{% extends  'baseauth.html' %}
+{% load crispy_forms_tags %}
+
+{% block main %}
+<div class="card mt-5">
+<div class="card-body">
+<h5 class="card-title ml-5 pl-3">Enter The Details Given To You</h5>
+<hr>
+<form method="post">
+{% csrf_token %}
+<input type="hidden" name="next" value="{{ next }}">
+
+{{ form|crispy }}
+
+<button type="submit" class="btn btn-success btn-block">Log in</button>
+</form>
+</div>
+</div>
+{% endblock %}

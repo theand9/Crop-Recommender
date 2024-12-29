@@ -1,0 +1,126 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+  <link rel="stylesheet" href="{% static 'farmerDetailPage/css/farmerDetail.css'%}">
+
+  <title>Farmer Detail | PredictiveYield</title>
+</head>
+
+<body>
+
+
+
+  <section class="detail-section">
+    <div class="jumbotron jumbotron-fluid mt-4">
+      <div class="container">
+        <h1> - Namaste,<span> {{registered_farmers.farmer_Name}}</span> </h1>
+        <hr class="mb-3">
+        <p class="lead"> Please verify your details below and click the Get Recommendations button in order to Get Crop
+          Recommendations!!</p>
+      </div>
+    </div>
+
+    <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+    <h2 class=" text-center" style="font-weight: 400;"> <i class="fas fa-info-circle" style="font-size:1.5em;"></i>
+      YOUR<strong> DETAILS:</strong></h2>
+    <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+
+    <div class="farmer-details mb-5">
+      <div class="container-fluid">
+
+        <form method="POST" action="{% url 'farmerReport-pdf'%}">
+          {% csrf_token %}
+          <div class="row mt-2">
+            <div class="col-md-2 ">
+              <label for="name" style="font-size:20px;">Name : </label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control" value="{{registered_farmers.farmer_Name}}" readonly>
+            </div>
+            <div class="col-md-2">
+              <label for="aadhar" style="font-size:20px;">Aadhar: </label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" name='aadhar' value="{{registered_farmers.aadhar_Number}}" class="form-control"
+                readonly>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-md-2">
+              <label for="name" style="font-size:20px;">Phone : </label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control" value="{{registered_farmers.phone_Number}}" readonly>
+            </div>
+            <div class="col-md-2">
+              <label for="name" style="font-size:20px;">DateOfRegistration: </label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control" value="{{registered_farmers.date_register}}" readonly>
+            </div>
+          </div>
+
+          <div class="row mt-5">
+
+            <div class="col-md-2 ">
+              <label for="name" style="font-size:20px;"> Village :</label>
+            </div>
+
+            <div class="col-md-4">
+              <input type="text" class="form-control" value="{{registered_farmers.village}}" readonly>
+            </div>
+            <div class="col-md-2 ">
+              <label for="name" style="font-size:20px;">District:</label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control" value="{{registered_farmers.district}}" readonly>
+            </div>
+
+
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-2 ">
+              <label for="name" style="font-size:20px;">Field Area : </label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control" value="{{registered_farmers.areaInHectare}}" readonly>
+            </div>
+
+            <div class="col-md-2 ">
+              <label for="name" style="font-size:20px;">Last Year Yield:</label>
+            </div>
+            <div class="col-md-4">
+              <input type="text" class="form-control" placeholder="Enter Your Previous Year Yield*">
+            </div>
+          </div>
+
+          <div class="row mt-5">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fas fa-arrow-circle-left"
+                  style="font-size: 1.1em;"></i><a href="{% url 'home'%}" style="color:#fff;text-decoration: none;">
+                  &nbsp; Go Back To Home</a></button>
+            </div>
+            <div class="col-md-8">
+              <input type="submit" value="Get Recommendation" class="btn btn-success btn-lg btn-block"></input>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

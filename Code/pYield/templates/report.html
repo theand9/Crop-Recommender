@@ -1,0 +1,93 @@
+{% load staticfiles %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Recommendation Report </title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="section">
+            <h1 style="font-size:30px;line-height:0.5;padding: 25px;background-color:#45ef24;margin-bottom: 5;">
+                pY-Predictive Yield
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <span style="font-size:17px;">Date : {{date}}</span>
+            </h1>
+
+        </div>
+        <div class="contianer" style="padding:6px;font-size:20px;margin-top: 20px;margin-bottom: 5">
+            <table border="1px">
+                <tr>
+                    <td>Farmer Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{farmer_Name}}</td>
+
+                </tr>
+                <tr>
+                    <td>Phone Number : &nbsp;&nbsp;&nbsp;&nbsp;{{farmer_Phone}}</td>
+                </tr>
+                <tr>
+                    <td>Aadhar Number : &nbsp;&nbsp;&nbsp;{{farmer_Aadhar}}</td>
+                </tr>
+                <tr>
+                    <td>Farmer's Area : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{farmer_Area}} Ha
+                    </td>
+                </tr>
+                <tr>
+                    <td>District :
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{farmer_Dist}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Village :
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{farmer_Village}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <h2 style="font-size:30px;line-height: 0;margin-top:40px;">Recommended Crops** : </h2>
+        <table border="1" width="100%" style="font-size:20px;margin-top: 20px;margin-bottom:7;">
+            <tr style="padding:10px 20px;">
+                <th style="padding-bottom:-3px;font-size:30px;">Season</th>
+                <td colspan="3" style="padding-left:100px;font-size: 30px; padding-bottom: -4px;">{{ season }}, 2019
+                </td>
+            </tr>
+            <tr style="padding: 6px 10px">
+                <th>Crop Name</th>
+                <td>{{crop1}}</td>
+                <td>{{crop2}}</td>
+                <td>{{crop3}}</td>
+            </tr>
+            <tr style="padding: 6px">
+                <th>Profit Per Hectare</th>
+                <td>Rs. {{crop1_Profit}}</td>
+                <td>Rs. {{crop2_Profit}}</td>
+                <td>Rs. {{crop3_Profit}}</td>
+            </tr>
+            <tr style="padding:10px 20px;">
+                <th>Date Of Harvest <br> (approx.)</th>
+                <td> {{crop1_Gtime}} </td>
+                <td> {{crop2_Gtime}} </td>
+                <td> {{crop3_Gtime}} </td>
+            </tr>
+        </table>
+
+        <hr>
+        <div class="row">
+            <footer>
+                <p>**The Crop Recommendations obtained from this report are based on Predictions made by a Machine
+                    Learning Algorithm. pY: Predictive Yield is not responsible for any losses which may occur due to an
+                    Act of God or Man-Made Error. The Profit Per Hectare estimate is approximate. Use Recommendations at
+                    your own risk and discretion.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

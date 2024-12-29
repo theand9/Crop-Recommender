@@ -1,0 +1,243 @@
+body {
+  background: #00F260;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, right top, left top, from(#0575E6), to(#00F260));
+  background: linear-gradient(to left, #0575E6, #00F260);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.about-section .container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.about-section .container-fluid .topImage {
+  margin-bottom: 4%;
+}
+
+.about-section .container-fluid .topImage img {
+  height: 100vh;
+  width: 100%;
+}
+
+.about-section .container-fluid .topImage .layer {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+
+.about-section .container-fluid .section-title hr {
+  margin-left: -2%;
+}
+
+.about-section .container-fluid .section-title .section_main_title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  line-height: 1.27;
+  font-weight: 300;
+  margin-left: -2%;
+}
+
+.about-section .container-fluid .section-title .section_main_title strong {
+  font-weight: 600;
+}
+
+.about-section .container-fluid .about-box {
+  -webkit-box-shadow: 0 0 0 10px #000000 inset;
+  box-shadow: 0 0 10px 10px #000000 inset;
+  height: 28.125em;
+  position: relative;
+  display: block;
+  width: 26em;
+  margin: 1em;
+}
+
+.about-section .container-fluid .about-box .videopopup img {
+  transform: translateY(30px) translateX(-30px);
+  -webkit-transform: translateY(30px) translateX(-30px);
+  width: 25em;
+  z-index: 1;
+  position: relative;
+  height: 28.125em;
+  margin: 1em;
+  border: 10px solid #fff;
+}
+
+.about-section hr {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.about-team {
+  background-color: #fff;
+  padding-bottom: 80px;
+  margin-top: 10%;
+}
+
+.about-team h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+}
+
+.about-team .container {
+  padding: 50px 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about-team .container .testimonial {
+  text-align: center;
+  padding: 30px 30px 50px;
+  position: relative;
+}
+
+.about-team .container .testimonial .icon {
+  font-size: 60px;
+  opacity: 0.7;
+  margin-bottom: 0.2em;
+}
+
+.about-team .container .testimonial .description {
+  font-size: 1em;
+  color: #000;
+  text-align: justify;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  letter-spacing: -1px;
+}
+
+.about-team .container .testimonial .testimonial-content {
+  position: absolute;
+  left: 0;
+}
+
+.about-team .container .testimonial .pic {
+  display: inline-block;
+  border: 6px solid #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2px 2px #f4770b;
+          box-shadow: 0 0 2px 2px #f4770b;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  margin-left: 120px;
+}
+
+.about-team .container .testimonial .pic img {
+  height: auto;
+  width: 100%;
+}
+
+.about-team .container .testimonial .pic img {
+  width: 100px !important;
+  height: 100px;
+}
+
+.about-team .container .testimonial .title {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+  text-transform: capitalize;
+  margin: 0 0 8px 130px;
+}
+
+.about-team .container .testimonial .post {
+  display: block;
+  font-size: 14px;
+  color: #000;
+  margin: 0 0 8px 130px;
+}
+
+.about-team .container .testimonial:before,
+.about-team .container .testimonial:after {
+  content: "";
+  border-top: 70px solid #000;
+  border-right: 310px solid transparent;
+  position: absolute;
+  bottom: -10%;
+  left: 0;
+}
+
+.about-team .container .testimonial::after {
+  border-right: none;
+  border-left: 340px solid transparent;
+  left: auto;
+  right: 0;
+}
+
+.scope-section {
+  width: 100%;
+  height: auto;
+  padding-top: 30px;
+}
+
+.scope-section .image-mh img {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 30px;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.scope-section .scope-title .scope_main_title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 2.2em;
+  line-height: 1.27;
+  font-weight: 300;
+  margin-left: 1em;
+}
+
+.scope-section .scope-title .scope_main_title strong {
+  font-weight: 600;
+}
+
+.scope-section .scope-title .scope-content {
+  padding: 2em;
+}
+
+.scope-section .scope-title .scope-content li {
+  margin-bottom: 20px;
+}
+
+.philosophy-section {
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.philosophy-section .philosophy-content {
+  padding-left: 35px;
+}
+
+.philosophy-section .philosophy-content .ph-thought {
+  font-size: 2em;
+  font-weight: 700;
+  color: #0575e5;
+}
+
+.philosophy-section .philosophy_main_title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  line-height: 1.27;
+  font-weight: 300;
+}
+
+.philosophy-section .philosophy_main_title strong {
+  font-weight: 600;
+}
+
+.philosophy-section .ph-Image img {
+  width: 150px;
+  height: 150px;
+  margin-left: 50px;
+}
+/*# sourceMappingURL=about.css.map */

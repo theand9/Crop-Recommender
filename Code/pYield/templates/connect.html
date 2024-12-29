@@ -1,0 +1,335 @@
+{%extends 'base.html'%}
+{% load staticfiles %}
+
+{% block content %}
+<title>Connect | PredictiveYield </title>
+<div class="image-section">
+    <div class="row">
+        <div class="col-md-12 topImage">
+            <div class="layer"></div>
+
+            <img src="{%static 'connectPage/images/c2.jpeg'%}" alt="">
+            <div class="carousel-caption d-none d-md-block">
+                <h2 class="animated fadeIn delay-1s" style="margin-left: -3%">Connect with Us Today Reap the Benefits
+                    for a
+                    Lifetime</h2>
+                <hr style="background-color: #fff;margin-left: -30px;margin-right: 40%;">
+                <p class="animated fadeIn delay-1s">
+                    It's as Simple as a Walk to Your Nearest Local Authority and Giving Your Basic Details
+                </p>
+                <a href="{% url 'farmerRegister'%}"><button type="button" class="btn btn-danger btn-sm"
+                        style="font-size:1.2em;margin-left: -2em;">Register Now</button></a> <i
+                    class="fas fa-angle-double-right"></i>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- connect with us  -->
+<div class=" contact-details">
+    <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;margin-top: 3%;">
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="section_main_title text-center" style="font-weight: 400;"> <i class="fas fa-address-card"
+                    style="font-size: 1.5em; "></i> CONTACT<strong> DETAILS</strong></h2>
+
+            <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+        </div>
+    </div>
+
+    <div class="row mt-1 p-4">
+        <div class="col-md-6 col-sm-12 content">
+            <div class="row">
+                <div class="col-md-7">
+                    <h2><span><i class="fas fa-map-marker-alt"></i></span> Address:</h2>
+                    <address>
+                        The predictiveYield HQ<br>
+                        91/a, 21st Floor,<br>
+                        Mint Chamber, Mint Road,<br>
+                        Fort, Mumbai-01,<br>
+                        India.<br>
+                    </address>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <h2><span><i class="fas fa-mobile-alt"></i></span> Call:</h2>
+                        <br>
+                        <p>
+                            Our helplines are open 24x7<br>
+                            Contact us on:<br>
+                            +91-955-550-2110<br>
+                            +91 8889 2888 2228
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <h2><span><i class="fas fa-envelope"></i></span> Email:</h2>
+                        <a href="#" style=" color: rgba(5, 245, 21, 0.98)">helpingyou@pyield.com</a><br>
+                        <a href="#" style=" color: rgba(5, 245, 21, 0.98)">support@pyield.com</a><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col-md-6 col-sm-12 content">
+            <form>
+                <h2 class="ml-2 pl-2"> <span><i class="fas fa-pencil-alt"></i></span> Get In Touch:</h2>
+                <div class="form-row">
+                    <div class="col-md-6 col-sm-12 mt-2">
+                        <input type="text" class="form-control" placeholder="Full Name*">
+                    </div>
+
+                    <div class="col-md-6 col-sm-12 mt-2">
+                        <input type="email" class="form-control" placeholder="Email Address*">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mt-4">
+                        <div class="form-group">
+
+                            <textarea class="form-control" rows="3" placeholder="Enter Your Queries Here*"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-md-12">
+                        <button type="button" class="btn btn-primary btn-lg btn-block"><i class="fas fa-paper-plane"
+                                style="font-size:1em;"></i> Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- connect with us ends here -->
+
+<!-- frequently ask question starts here -->
+<div class=" mb-4">
+    <div class="container pt-5">
+        <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+        <div class="row ">
+            <div class="col-md-12">
+                <h2 class="section_main_title text-center" style="font-weight: 400;"><i class="fas fa-question-circle"
+                        style="font-size: 1.5em;"></i> FREQUENTLY ASKED <strong> OUESTIONS:</strong></h2>
+
+                <hr style="background-color: #fff; margin-left: 8%;margin-right: 8%;">
+            </div>
+        </div>
+
+        <div class="row mt-3 text-center">
+            <p class="hero-text m-auto">
+                At pYield, supporting our customers is one of the most important things we do. If you have any queries
+                please start by looking through the articles below.
+            </p>
+        </div>
+    </div>
+
+    <div class="container pt-5 pb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading " role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                    aria-expanded="false" aria-controls="collapseOne">
+                                    How To Register ?</a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                            aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <p>
+                                    You can register on our website by going to the register section. After scrolling
+                                    down enter the required information in the corresponding fields. Click Register.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading " role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"
+                                    aria-expanded="false" aria-controls="collapseTwo">
+                                    Is our Information Safe With You?</a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel"
+                            aria-labelledby="headingTwo">
+                            <div class="panel-body">
+                                <p>
+                                    Your data is of utmost importance to us and is very safe with us. Our databases are
+                                    isolated and we have applied various security measures such as Cross site scripting
+                                    (XSS) protection,
+                                    Cross site request forgery (CSRF) protection, SQL injection protection, Clickjacking
+                                    protection, SSL/HTTPS security, Host header validation, Session security.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default mt-5">
+                        <div class="panel-heading " role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"
+                                    aria-expanded="false" aria-controls="collapseThree">
+                                    Which Crops do you Recommend?</a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseThree" class="panel-collapse collapse in" role="tabpanel"
+                            aria-labelledby="headingThree">
+                            <div class="panel-body">
+                                <p>
+                                    We recommend 19 crops ie. Arhar, Bajra, Cotton, Gram, Groundnut, Jowar, Maize,
+                                    Moong, Mustard, Nigerseed, Ragi, Rice, Safflower, Sesamum, Soyabean, Sugarcane,
+                                    Sunflower, Urad, Wheat
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default mt-5">
+                        <div class="panel-heading " role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"
+                                    aria-expanded="false" aria-controls="collapseFour">
+                                    How accurate are your Recommendations? </a>
+                            </h4>
+                        </div>
+
+                        <div id="collapseFour" class="panel-collapse collapse in" role="tabpanel"
+                            aria-labelledby="headingFour">
+                            <div class="panel-body">
+                                <p>
+                                    pYield is a Self-Evolving Smart Crop Recommender. It uses Machine Learning
+                                    Techniques and Evolves every Year according to the Yield.<br>
+                                    Our Engineers are constantly making efforts to improve the efficiency and accuracy
+                                    of pYield.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- frequently ask question ends here -->
+
+<!-- how and when secction -->
+<section class="contact-section" style="background-color: #fff;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <hr style="background-color: #fff; margin-bottom: 2%;margin-top:4%;">
+                <div>
+                    <h2 class="text-center" style="font-weight: 400;"><i class="fas fa-file-signature"
+                            style="font-size: 1.5em;"></i> HOW AND WHEN TO <strong> CONTACT :</strong></h2>
+
+                    <hr style="background-color: #fff;margin-top: 2%;margin-bottom: 1%;">
+                </div>
+                <div class="mt-5 pb-4">
+                    <div class="row">
+                        <div class="col-md-6 " style="margin-left:-2%;">
+                            <ul>
+                                <li>
+                                    <h3>HOW ?</h3>
+                                    <p>
+                                        Our Motto is to Provide Services and Alleviate Problems of our Customers to the
+                                        Best of our Capabilities.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                You can contact us on our 24x7 Helplines. <br>
+                                                One can also send an Email to us on one of our above mentioned emails.
+                                                We will try our best to furnish prompt replies.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                For Corporate Inquiries you can also Send a Post to our
+                                                Address or come visit us personally.
+                                            </p>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6" style="margin-left:2%;">
+                            <ul>
+                                <li>
+                                    <h3>WHEN & WHERE ?</h3>
+                                    <p>
+                                        Our Motto is to Provide Services and Alleviate Problems of our Customers to the
+                                        Best of our Capabilities.
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                You can contact us on our 24x7 Helplines. <br>
+                                                One can also send an Email to us on one of our above mentioned emails.
+                                                We will try our best to furnish prompt replies.
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p>
+                                                For Corporate Inquiries you can also Send a Post to our
+                                                Address or come visit us personally.
+                                            </p>
+                                        </li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- how and when secction ends here -->
+
+
+<!-- map section -->
+<div class="map-section">
+    <div class="row">
+        <div class="col-md-12 ">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.004833501378!2d72.83568351490169!3d19.10744388706994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9c651c56f9b%3A0xc32173e36e9d804f!2sShri+Bhagubhai+Mafatlal+Polytechnic!5e0!3m2!1sen!2sin!4v1551466187757"
+                width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
+    </div>
+    <!-- map-section ends here -->
+</div>
+{% endblock %}
